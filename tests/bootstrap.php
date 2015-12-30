@@ -1,11 +1,7 @@
 <?php
 
-define('TEST_ROOT',    __DIR__ . '/tmp');
-define('PHPUNIT_ROOT', realpath(dirname(__DIR__)));
-define('BOLT_AUTOLOAD',  realpath(dirname(__DIR__) . '/vendor/autoload.php'));
+include_once __DIR__ . '/../vendor/bolt/bolt/tests/phpunit/bootstrap.php';
 
-@mkdir(TEST_ROOT . '/app/cache', 0777, true);
-@mkdir(TEST_ROOT . '/app/config', 0777, true);
-@mkdir(TEST_ROOT . '/app/database', 0777, true);
+define('EXTENSION_AUTOLOAD',  realpath(dirname(__DIR__) . '/vendor/autoload.php'));
 
-require_once BOLT_AUTOLOAD;
+require_once EXTENSION_AUTOLOAD;

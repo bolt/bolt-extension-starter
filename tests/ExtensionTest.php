@@ -3,21 +3,26 @@
 namespace Bolt\Extension\YourName\ExtensionName\Tests;
 
 use Bolt\Tests\BoltUnitTest;
-use Bolt\Extension\YourName\ExtensionName\Extension;
+use Bolt\Extension\YourName\ExtensionName\ExtensionNameExtension;
 
 /**
- * Ensure that the ExtensionName extension loads correctly.
+ * ExtensionName testing class.
  *
+ * @author Your Name <you@example.com>
  */
 class ExtensionTest extends BoltUnitTest
 {
+    /**
+     * Ensure that the ExtensionName extension loads correctly.
+     */
     public function testExtensionRegister()
     {
-        $app = $this->getApp();
-        $extension = new Extension($app);
-        $app['extensions']->register( $extension );
+        $app = $this->getApp(false);
+        $extension = new ExtensionNameExtension($app);
+        $app['extensions']->add($extension);
+
         $name = $extension->getName();
         $this->assertSame($name, 'ExtensionName');
-        $this->assertSame($extension, $app["extensions.$name"]);
+        $this->assertInstanceOf('\Bolt\Extension\ExtensionInterface', $app['extensions']->get('ExtensionName'));
     }
 }
