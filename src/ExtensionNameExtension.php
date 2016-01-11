@@ -2,7 +2,6 @@
 
 namespace Bolt\Extension\YourName\ExtensionName;
 
-use Bolt\Application;
 use Bolt\Asset\File\JavaScript;
 use Bolt\Asset\File\Stylesheet;
 use Bolt\Extension\SimpleExtension;
@@ -17,28 +16,13 @@ class ExtensionNameExtension extends SimpleExtension
     /**
      * {@inheritdoc}
      */
-    public function getName()
-    {
-        return 'ExtensionName';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     protected function registerAssets()
     {
+        // Add some web assets from the web/ directory
         return [
             new Stylesheet('extension.css'),
             new JavaScript('extension.js'),
         ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function registerTwigPaths()
-    {
-        return ['templates'];
     }
 
     /**
