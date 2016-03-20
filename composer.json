@@ -1,10 +1,9 @@
 {
-    "name": "bolt/bolt-extension-starter",
-    "description": "A description about your extension should go here.",
+    "name": "",
+    "description": "",
     "type": "bolt-extension",
     "keywords": [
-        "foo",
-        "bar"
+        ""
     ],
     "require": {
         "bolt/bolt": "^3.0"
@@ -15,8 +14,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Your Name",
-            "email": "you@example.com"
+            "name": "",
+            "email": ""
         }
     ],
     "minimum-stability": "dev",
