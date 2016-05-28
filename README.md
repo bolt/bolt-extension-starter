@@ -10,7 +10,6 @@ To get going run the following command, replacing the last argument with the nam
 For more information, see this page in the Bolt documentation: https://docs.bolt.cm/extensions/building-starter/about
 
 ## Readme Boilerplate
----
 
 Extension Name
 ======================
