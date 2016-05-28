@@ -11,6 +11,10 @@ For more information, see this page in the Bolt documentation: https://docs.bolt
 
 ## Readme Boilerplate
 
+You can use the following boilerplate as a starting point for your extension.
+
+---
+
 Extension Name
 ======================
 
